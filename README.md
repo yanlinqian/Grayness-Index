@@ -1,7 +1,7 @@
 # On Finding Gray Pixels
 Matlab Code accompanying the paper **On Finding Gray Pixels**. [[**arXiv**]](https://arxiv.org/abs/1901.03198)
 
-![Intro](/home/qian2/qian2_old/CC/Grayness-Index/intro.jpg  "Intro")
+![Intro](./intro.jpg  "Intro")
 From left to right: (a) input image. (b) computed grayness index GI. darker blue indicates higher degree of grayness. (c) the N % most gray pixels rendered using the corresponding pixel color (greenish) in (a). (d) estimated illumination color. (e) ground truth color. (f) corrected image using (d).
 
 **If you use grayness index code or results, please consider citing following paper**:
