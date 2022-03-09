@@ -54,7 +54,7 @@ function [EvaLum] = GPconstancy_GI(input_im,param)
     Gidx_unique(Greyidx_unique<=sort_unique(floor(numGPs))) = 1;
     choosen_pixels=img_column(Gidx_unique==1,:);
     EvaLum=normr(mean((choosen_pixels),1));
-    
+    i=1;
     if param.prior.use
         uv_chosen=RgbToUv(choosen_pixels')';
         u_ind=floor((uv_chosen(:,1)-(-1))/.04);
@@ -161,9 +161,9 @@ function [EvaLum] = GPconstancy_GI(input_im,param)
             double(choosen_dgp)/255.0...
              ,ones(size(sequence_1,1),20,3), pred_bar, ones(size(sequence_1,1),20,3),gt_bar...
             );
-        %imshow(bigsequence)
+
         name_sequence=sprintf(['sequence_' name_img])
-        imwrite(bigsequence,fullfile(param.visualization.sequence_dir,name_sequence));
+        imwrite(bigsequence, name_sequence);
     end
 
 end
